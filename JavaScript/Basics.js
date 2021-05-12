@@ -94,3 +94,40 @@ const binaryArrayToNumber = arr => parseInt(arr.join(''), 2);
 
 /* ----------------------------------------- */
 
+// Basic Hello World function
+
+function greet(){
+  return "hello world!"
+}
+
+/* ----------------------------------------- */
+
+// Convert string to number
+
+var stringToNumber = function(str){
+  let num = str * 1;
+  return num;
+}
+
+//
+var stringToNumber = function(str){
+  return parseInt(str);
+}
+
+/* ----------------------------------------- */
+
+
+
+/* ----------------------------------------- */
+
+
+
+/* ----------------------------------------- */
+
+
+
+/* ----------------------------------------- */
+
+
+
+/* ----------------------------------------- */
