@@ -109,14 +109,28 @@ var stringToNumber = function(str){
   return num;
 }
 
-//
+// Most popular
 var stringToNumber = function(str){
   return parseInt(str);
 }
 
 /* ----------------------------------------- */
 
+//Check to see if number is even or odd
 
+function even_or_odd(number) {
+  if (number % 2 === 0) {
+    return "Even"
+  } else {
+    return "Odd"
+  }
+}
+
+// Most Popular
+
+function even_or_odd(number) {
+  return number % 2 ? "Odd" : "Even"
+}
 
 /* ----------------------------------------- */
 
