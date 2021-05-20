@@ -133,9 +133,39 @@ function even_or_odd(number) {
 }
 
 /* ----------------------------------------- */
+//given camelCasing string, return with spaces
 
+function solution(string) {
+  let arr = string.split('')
+  let arr2 = []
+  for (i = 0; i < arr.length; i++) {
+    if (arr[i] === arr[i].toUpperCase()) {
+      arr2.push(' ', arr[i])
+    } else {
+      arr2.push(arr[i])
+    }
+  }
+console.log(arr2.join(""))
+}
 
+solution('camelCasing')
+solution('thisIsATest')
 
+//most popular
+function solution(string) {
+  return(string.replace(/([A-Z])/g, ' $1'));
+
+}
+//
+function solution(string) {
+  string = string.split('').map(function (el) {
+    if (el === el.toUpperCase()) {
+      el = ' ' + el
+    }
+    return el
+  })
+  return string.join('')
+}
 /* ----------------------------------------- */
 
 
