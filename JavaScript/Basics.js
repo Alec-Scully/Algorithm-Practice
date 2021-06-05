@@ -168,7 +168,44 @@ function solution(string) {
 }
 /* ----------------------------------------- */
 
+// return longest string with only 2 unique letters
 
+function string(p1) {
+  let string = p1.split("")
+  let sub = []
+  let sub2 = []
+  let count = 0
+  for (i = 0; i < string.length; i++) {
+      if (!sub.includes(string[i]) && count === 2) {
+          if (sub2.length < sub.length) {
+              sub2 = sub
+          }
+          count = 0
+          sub = []
+          let pos = 1
+          let start = string[i - 1]
+          for (j = i-1; j > 0; j--) {
+              if (string[j] == start) {
+                  pos++
+              } else {
+                  break;
+              }
+          }
+          i = i - pos;
+      } else if (sub.includes(string[i])) {
+          sub.push(string[i])
+      } else if (count < 2) {
+          sub.push(string[i])
+          count++
+      }
+  }
+
+  return sub2
+}
+
+string("aacacaac")
+
+// should return "aacacaac"
 
 /* ----------------------------------------- */
 
