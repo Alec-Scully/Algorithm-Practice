@@ -209,6 +209,19 @@ string("aacacaac")
 
 /* ----------------------------------------- */
 
+// adding different values in JavaScript
+
+var a1;
+var a2 = "3";
+var a3 = 3;
+
+var b1 = a1 + a2;
+var b2 = a1 + a3;
+var b3 = a2 + a3;
+
+console.log(b1)
+console.log(b2)
+console.log(b3)
 
 
 /* ----------------------------------------- */
