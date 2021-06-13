@@ -223,5 +223,13 @@ console.log(b1)
 console.log(b2)
 console.log(b3)
 
+var c1 = b1 + a1
+var c2 = b2 + a2
+var c3 = b3 + a3
+
+console.log(c1)
+console.log(c2)
+console.log(c3)
+
 
 /* ----------------------------------------- */
