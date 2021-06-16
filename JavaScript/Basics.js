@@ -219,17 +219,34 @@ var b1 = a1 + a2;
 var b2 = a1 + a3;
 var b3 = a2 + a3;
 
-console.log(b1)
-console.log(b2)
-console.log(b3)
+// console.log(b1)
+// console.log(b2)
+// console.log(b3)
 
 var c1 = b1 + a1
 var c2 = b2 + a2
 var c3 = b3 + a3
 
-console.log(c1)
-console.log(c2)
-console.log(c3)
+// console.log(c1)
+// console.log(c2)
+// console.log(c3)
 
 
 /* ----------------------------------------- */
+
+// take in array of string, return them bumbered
+var number=function(array){
+  for(i=0; i<array.length; i++){
+    array[i] = `${i+1}: ${array[i]}`
+  }
+  console.log(array)
+}
+
+number(["a", "b", "c"])
+
+//best practice
+var number = function(array) {
+  return array.map(function (line, index) {
+    return (index + 1) + ": " + line;
+  });
+}
