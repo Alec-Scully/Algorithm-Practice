@@ -253,6 +253,79 @@ var number = function(array) {
 
 /* ----------------------------------------- */
 
+function solution1(S) {
+    var occurrences = new Array(26);
+    for (var i = 0; i < occurrences.length; i++) {
+        occurrences[i] = 0;
+    }
+
+    for (var id in S) {
+        occurrences[S.charCodeAt(id) - 'a'.charCodeAt(0)]++;
+    }
+
+    var best_char = 'a';
+    var best_res = 0;
+
+    for (var i = 0; i < 26; i++) {
+        if (occurrences[i] > best_res) {
+            best_char = String.fromCharCode('a'.charCodeAt(0) + i);
+            best_res = occurrences[i];
+        }
+    }
+
+    return best_char;
+}
+
+console.log(solution1("helloaaabbb"))
+
+/* ******************************* */
+
+
+
+function solution2(message, K) {
+    let a = message.split("")
+    if (K > a.length) {
+        return message
+    } else if (K !== 0) {
+        if (a[K] === " " && a[K - 1] !== " ") {
+            // console.log(a.slice(0, K).join(""))
+            return (a.slice(0, K).join(""))
+        } else {
+            solution2(message, K - 1)
+        }
+    } else {
+        // console.log("Message too long or does not contain spaces.")
+    }
+}
+
+// solution2("To crop or not to crop", 21)
+// solution2("Codility We test coders", 14) 
+
+/* ******************************* */
+
+function solution3(A) {
+    count = 0;
+    for (i = 0; i < A.length; i++) {
+        if (i + 1 > A.length || i + 2 > A.length) {
+        } else if (A[i] - A[i + 1] == A[i + 1] - A[i + 2]) {
+            count += 1;
+
+            let newA = A.slice(i + 2)
+            let dist = A[i] - A[i + 1]
+
+            for (j = 0; j < newA.length; j++) {
+                if (j + 1 >= A.length) {
+                    console.log("No more new array!")
+                } else if (newA[j] - newA[j + 1] == dist) {
+                    count += 1;
+                }
+            }
+        }
+    }
+    // console.log(count)
+}
+
+solution3([1, 1, 1, 1, 1, 1, 1, 1, 1, 1])
 /* ----------------------------------------- */
 
 /* ----------------------------------------- */
