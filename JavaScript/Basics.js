@@ -328,6 +328,16 @@ function solution3(A) {
 solution3([1, 1, 1, 1, 1, 1, 1, 1, 1, 1])
 /* ----------------------------------------- */
 
+//given two strings, determine if the first string ends with the second string
+
+function solution(str, ending){
+  return str.endsWith(ending)
+}
+
+solution("abc", "bc")
+solution("test", "?")
+
+
 /* ----------------------------------------- */
 
 /* ----------------------------------------- */
